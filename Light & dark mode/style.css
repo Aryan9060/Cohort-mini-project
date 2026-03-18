@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 100vh;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ff4b04;
+  color: white;
+  cursor: pointer;
+  box-shadow: 5px 8px 10px  #615e5e;
+}
+.dark{
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.darkModeBtn {
+  border-color: #ffffff;
+  color: #000000;
+  box-shadow: 5px 8px 10px  #dbdada;
+}

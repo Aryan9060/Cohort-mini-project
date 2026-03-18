@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Toggle theam</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Light and Dark Mode</h1>
+      <button class="btn">Light Mode</button>
+    </div>
+  </body>
+</html>
+
+<script>
+  const button = document.getElementsByClassName("btn")[0];
+  const container = document.getElementsByClassName("container")[0];
+
+  button.addEventListener("click", () => {
+    document.body.classList.contains("dark")
+      ? document.body.classList.remove("dark")
+      : document.body.classList.add("dark");
+  });
+</script>
