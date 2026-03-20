@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <h1>Light and Dark Mode</h1>
-      <button class="btn">Light Mode</button>
+      <button class="btn">Light Theme</button>
     </div>
   </body>
 </html>
@@ -19,8 +19,9 @@
   const container = document.getElementsByClassName("container")[0];
 
   button.addEventListener("click", () => {
+    document.body.classList.toggle("dark")
     document.body.classList.contains("dark")
-      ? document.body.classList.remove("dark")
-      : document.body.classList.add("dark");
+    ? (button.innerHTML = "Dark Mode")
+    : (button.innerHTML = "Light Mode");
   });
 </script>
