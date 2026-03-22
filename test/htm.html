@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Chai CSS to Inline Style Converter</title>
+    <script type="module" src="./main.js"></script>
+    
+  </head>
+  <body>
+    <div class="container">
+      <h1>Chai CSS to Inline Style</h1>
+
+      <div id="preview-box">
+        <p>Apply classes to see inline styles!</p>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="text"
+          id="css-input"
+          placeholder="e.g., chaiBg-orange-500 chaiT-white"
+        />
+        <button id="apply-btn" class="chaiBg-orange-500">Apply</button>
+      </div>
+
+      <div>
+        <h2 style="font-size: 18px; font-weight: 500; margin-bottom: 10px">
+          Applied Inline Styles:
+        </h2>
+        <div id="applied-styles"></div>
+      </div>
+    </div>
+
+    <script>
+      const previewBox = document.getElementById("preview-box");
+      const cssInput = document.getElementById("css-input");
+      const applyBtn = document.getElementById("apply-btn");
+      const appliedStylesDiv = document.getElementById("applied-styles");
+
+      // This is a small demo map. In a real app, this would be much larger
+      // or generated from your CSS file.
+      const classToStyleMap = {
+        "chaiBg-blue-500": "background-color: #3b82f6;",
+        "chaiBg-red-500": "background-color: #ef4444;",
+        "chaiBg-green-500": "background-color: #22c55e;",
+        "chaiT-white": "color: #ffffff;",
+        "chaiT-black": "color: #000000;",
+        "chaiP-20": "padding: 20px;",
+        "chaiP-30": "padding: 30px;",
+        "chaiBR-10": "border-radius: 10px;",
+        "chaiShadow-lg": "box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);",
+      };
+
+      function updateStyles() {
+        const customClasses = cssInput.value.trim().split(" ").filter(Boolean);
+        let styleString = "padding: 20px;"; // Base style
+        let appliedStyles = "";
+
+        customClasses.forEach((cls) => {
+          if (classToStyleMap[cls]) {
+            styleString += ` ${classToStyleMap[cls]}`;
+            appliedStyles += `${classToStyleMap[cls]}\n`;
+          }
+        });
+
+        previewBox.style.cssText = styleString;
+        appliedStylesDiv.textContent = appliedStyles;
+      }
+
+      applyBtn.addEventListener("click", updateStyles);
+
+      // Initial state
+      updateStyles();
+    </script>
+  </body>
+</html>

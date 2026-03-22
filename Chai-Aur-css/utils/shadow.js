@@ -1,7 +1,8 @@
 export const shadow = {
-  s: "5px 5px 10px rgb(0,0,0,1)",
-  m: "10px 10px 20px rgb(0,0,0,1)",
-  l: "15px 15px 30px rgb(0,0,0,1)",
-  xl: "20px 20px 40px rgb(0,0,0,1)",
-  xxl: "25px 25px 50px rgb(0,0,0,1)", 
+  s: "0 1px 2px 0 rgb(0 0 0 / 0.05)",
+  m: "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+  l: "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)",
+  xl: "0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)",
+  xxl: "0 25px 50px -12px rgb(0 0 0 / 0.25)",
+  inner: "inset 0 2px 4px 0 rgb(0 0 0 / 0.05)",
 };

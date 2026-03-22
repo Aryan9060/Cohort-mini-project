@@ -1,61 +1,47 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Chai UI Demo</title>
-  </head>
-  <body class="chaiBg-blue-100 chaiP-20">
-    <!-- Navbar -->
-    <div
-      class="chaiFlex-direction-row chaiFlex-justify-between chaiFlex-align-center chaiBg-black chaiP-15 chaiMy-20"
-    >
-      <h1 class="chaiT-red-500 chaiFS-20">Chai UI</h1>
-      <div>
-        <span class="chaiT-red chaiMx-10">Home</span>
-        <span class="chaiT-white chaiMx-10">About</span>
-        <span class="chaiT-white chaiMx-10">Contact</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Chai Aur CSS</title>
+  <script type="module" src="./main.js"></script>
+
+</head>
+
+<body>
+
+  <body class="chaiBg-gray-50 chaiFlex chaiFlex-align-center chaiFlex-justify-center chaiH-100-vh">
+
+    <div class="chaiBg-white chaiP-40 chaiBr-10 chaiS-xl" style="width: 600px; max-width: 90%;">
+
+      <h1 class="chaiT-gray-800 chaiFs-28 chaiFw-500 chaiFa-center" style="margin-top: 0; margin-bottom: 25px;">Chai CSS
+        to Inline Style</h1>
+
+      <div id="preview" class="chaiFa-center chaiH-15-rem chaiW-100-%  chaiFlex chaiFlex-justify-center chaiFlex-align-center chaiMb-20" style="border: 2px dashed ;">
+        Apply classes to see inline styles!
       </div>
+
+      <div class="chaiFlex chaiFlex-align-center" style="gap: 15px; margin-bottom: 25px;">
+        <input type="text" id="classInput" placeholder="e.g., chaiBg-orange-500 chaiT-white"
+          class="chaiP-15 chaiBr-5 chaiT-gray-800 chaiFs-14" style="flex: 1; border: 1px solid #d1d5db; outline: none;">
+        <button id="applyBtn"
+          class="chaiBg-orange-500 chaiT-white chaiPx-30 chaiPy-15 chaiBr-5 chaiC-pointer chaiFw-bold chaiFs-14"
+          style="border: none;">Apply</button>
+      </div>
+
+      <div class="chaiFa-center">
+        <h3 class="chaiT-gray-800 chaiFs-16 chaiFw-600" style="margin-top: 0; margin-bottom: 15px;">Applied Inline
+          Styles:</h3>
+        <div id="output" class="chaiBg-gray-100 chaiBr-5 chaiP-15 chaiFs-14 chaiT-gray-700 chaiFa-left"
+          style="min-height: 25px; word-break: break-all;"></div>
+      </div>
+
     </div>
 
-    <!-- Container -->
-    <div class="chaiFlex-direction-row chaiFlex-gap-20 chaiFlex-justify-center">
-      <!-- Card 1 -->
-      <div
-        class="chaiBg-white chaiP-20 chaiBR-10 chaiB-1 chaiMx-10"
-        style="width: 250px"
-      >
-        <h2 class="chaiT-blue-500 chaiFS-20 chaiM-10">Profile</h2>
-        <p class="chaiFA-left chaiFS-14 chaiM-10">
-          Welcome to your dashboard. Manage your profile here.
-        </p>
-        <button class="chaiBg-blue chaiT-white chaiP-10 chaiBR-5">Edit</button>
-      </div>
-
-      <!-- Card 2 -->
-      <div
-        class="chaiBg-white chaiP-20 chaiBR-10 chaiB-1 chaiMx-10"
-        style="width: 250px"
-      >
-        <h2 class="chaiT-green-500 chaiFS-20 chaiM-10">Tasks</h2>
-        <p class="chaiFA-left chaiFS-14 chaiM-10">
-          Track your daily tasks and productivity.
-        </p>
-        <button class="chaiBg-green chaiT-white chaiP-10 chaiBR-5">View</button>
-      </div>
-
-      <!-- Card 3 -->
-      <div
-        class="chaiBg-white chaiP-20 chaiBR-10 chaiB-1 chaiMx-10"
-        style="width: 250px"
-      >
-        <h2 class="chaiT-red-500 chaiFS-20 chaiM-10">Settings</h2>
-        <p class="chaiFA-left chaiFS-14 chaiM-10">
-          Customize your preferences and account.
-        </p>
-        <button class="chaiBg-red chaiT-white chaiP-10 chaiBR-5">Open</button>
-      </div>
-    </div>
-
+    <!-- The original file imports main.js at the end of the body -->
     <script type="module" src="./main.js"></script>
+
+
   </body>
+
 </html>
