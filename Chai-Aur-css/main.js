@@ -276,7 +276,7 @@ const styleHandlers = {
     el.style.fontWeight = classSubArray[1];//chaiFw-bold
   },
 };
-function generateCSSUtility() {
+function handelCSSUtility() {
   const allElements = document.querySelectorAll("*");
   allElements.forEach((el) => {
     el.classList.forEach((className) => {
@@ -289,10 +289,12 @@ function generateCSSUtility() {
   });
 }
 
-generateCSSUtility();
+//initial call to handelCSSUtility
+handelCSSUtility();
 
+//observer to handelCSSUtility on mutation
 const observer = new MutationObserver(() => {
-  generateCSSUtility();
+  handelCSSUtility();
 });
 
 observer.observe(document.body, {
