@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Chai Aur CSS</title>
+  <title>Chai Tailwind</title>
   <script type="module" src="./main.js"></script>
 
 </head>
@@ -15,9 +15,9 @@ chaiFlex-gap-20 chaiFlex-align-center chaiFlex-justify-center  chaiP-6-rem">
 
     <div class="chaiBg-white chaiP-40 chaiBr-10 chaiS-xl" style="width: 600px; max-width: 90%;">
 
-      <h1 class="chaiT-gray-800 chaiFs-28 chaiFw-500 chaiFa-center chaiTa-center"
-        style="margin-top: 0; margin-bottom: 25px;">Chai CSS
-        to Inline Style</h1>
+      <h1 class="chaiT-gray-800 chaiFs-28 chaiFw-500 chaiFa-center chaiTa-center chaiMb-25">Chai <span
+          class="chaiT-orange-600">Tailwind</span>
+      </h1>
 
       <div id="preview"
         class="chaiFa-center chaiH-15-rem chaiW-100-%  chaiFlex chaiFlex-justify-center chaiFlex-align-center chaiMb-20"
@@ -58,13 +58,17 @@ chaiFlex-gap-20 chaiFlex-align-center chaiFlex-justify-center  chaiP-6-rem">
         </p>
 
         <h3 class="chaiT-orange-600 chaiMb-10 chaiMt-20">Spacing (Padding & Margin)</h3>
-        <p class="chaiMy-5"><strong>Padding:</strong> 
+        <p class="chaiMy-5"><strong>Padding:</strong>
           Standard <code>[prefix]-{px}</code> or Custom <code>[prefix]-{val}-{unit}</code><br>
-          <span class="chaiFs-12 chaiT-gray-500">Prefixes: <code>chaiP</code>, <code>chaiPx</code>, <code>chaiPy</code>, <code>chaiPt</code>, <code>chaiPb</code>, <code>chaiPl</code>, <code>chaiPr</code>. (e.g., <code>chaiP-2-rem</code>)</span>
+          <span class="chaiFs-12 chaiT-gray-500">Prefixes: <code>chaiP</code>, <code>chaiPx</code>, <code>chaiPy</code>,
+            <code>chaiPt</code>, <code>chaiPb</code>, <code>chaiPl</code>, <code>chaiPr</code>. (e.g.,
+            <code>chaiP-2-rem</code>)</span>
         </p>
-        <p class="chaiMy-5"><strong>Margin:</strong> 
+        <p class="chaiMy-5"><strong>Margin:</strong>
           Standard <code>[prefix]-{px}</code> or Custom <code>[prefix]-{val}-{unit}</code><br>
-          <span class="chaiFs-12 chaiT-gray-500">Prefixes: <code>chaiM</code>, <code>chaiMx</code>, <code>chaiMy</code>, <code>chaiMt</code>, <code>chaiMb</code>, <code>chaiMl</code>, <code>chaiMr</code>. (e.g., <code>chaiMx-auto</code>)</span>
+          <span class="chaiFs-12 chaiT-gray-500">Prefixes: <code>chaiM</code>, <code>chaiMx</code>, <code>chaiMy</code>,
+            <code>chaiMt</code>, <code>chaiMb</code>, <code>chaiMl</code>, <code>chaiMr</code>. (e.g.,
+            <code>chaiMx-auto</code>)</span>
         </p>
 
         <h3 class="chaiT-orange-600 chaiMb-10 chaiMt-20">Typography</h3>
@@ -92,7 +96,8 @@ chaiFlex-gap-20 chaiFlex-align-center chaiFlex-justify-center  chaiP-6-rem">
         <p class="chaiMy-5"><strong>Display:</strong> <code>chaiD-{block|hidden|inline|inline-block}</code></p>
 
         <h3 class="chaiT-orange-600 chaiMb-10 chaiMt-20">Borders & Effects</h3>
-        <p class="chaiMy-5"><strong>Border:</strong> <code>chaiB-{width}</code>, <code>chaiB-{color}-{width}</code> (e.g.,
+        <p class="chaiMy-5"><strong>Border:</strong> <code>chaiB-{width}</code>, <code>chaiB-{color}-{width}</code>
+          (e.g.,
           <code>chaiB-2</code>, <code>chaiB-black-2</code>)
         </p>
         <p class="chaiMy-5"><strong>Border Radius:</strong> <code>chaiBr-{px}</code> (e.g., <code>chaiBr-10</code>)</p>
@@ -116,19 +121,23 @@ chaiFlex-gap-20 chaiFlex-align-center chaiFlex-justify-center  chaiP-6-rem">
         const codes = document.querySelectorAll("code");
 
         codes.forEach(code => {
-          console.log(code);
-
           code.classList.add("chaiT-fuchsia-400", 'chaiBg-gray-200', 'chaiBr-5', 'chaiP-3', 'chaiFs-12');
         });
       }
       addClassToCodes();
 
       btn.addEventListener("click", () => {
-        console.log(input.value);
 
-        const classes = input.value.split(" ");
-        output.textContent = classes.join(", ");
-        preview.className = classes.join(" ");
+        const newClasses = input.value.trim().split(" ");
+        output.textContent = newClasses.join(", ");
+        preview.className = newClasses.join(" ");
+      });
+
+      // Add event listener for Enter key
+      input.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          btn.click();
+        }
       });
 
 

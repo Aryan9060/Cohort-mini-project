@@ -259,7 +259,11 @@ const styleHandlers = {
   //chaiFs:font size
   chaiFs: (el, classSubArray) => {
     if (classSubArray.length < 2) return;//if the class is just chaiFs
-    el.style.fontSize = `${classSubArray[1]}px`;//chaiFs-10
+    if (classSubArray.length === 3) {
+      el.style.fontSize = `${classSubArray[1]}${classSubArray[2]}`;//chaiFs-10-rem
+    } else {
+      el.style.fontSize = `${classSubArray[1]}px`;//chaiFs-10
+    }
   },
   //chaiTa:text align
   chaiTa: (el, classSubArray) => {
