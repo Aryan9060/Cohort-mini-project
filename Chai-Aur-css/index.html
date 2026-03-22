@@ -14,10 +14,12 @@
 
     <div class="chaiBg-white chaiP-40 chaiBr-10 chaiS-xl" style="width: 600px; max-width: 90%;">
 
-      <h1 class="chaiT-gray-800 chaiFs-28 chaiFw-500 chaiFa-center" style="margin-top: 0; margin-bottom: 25px;">Chai CSS
+      <h1 class="chaiT-gray-800 chaiFs-28 chaiFw-500 chaiFa-center chaiTa-center" style="margin-top: 0; margin-bottom: 25px;">Chai CSS
         to Inline Style</h1>
 
-      <div id="preview" class="chaiFa-center chaiH-15-rem chaiW-100-%  chaiFlex chaiFlex-justify-center chaiFlex-align-center chaiMb-20" style="border: 2px dashed ;">
+      <div id="preview"
+        class="chaiFa-center chaiH-15-rem chaiW-100-%  chaiFlex chaiFlex-justify-center chaiFlex-align-center chaiMb-20"
+        style="border: 2px dashed ;">
         Apply classes to see inline styles!
       </div>
 
@@ -30,7 +32,7 @@
       </div>
 
       <div class="chaiFa-center">
-        <h3 class="chaiT-gray-800 chaiFs-16 chaiFw-600" style="margin-top: 0; margin-bottom: 15px;">Applied Inline
+        <h3 class="chaiT-gray-800 chaiFs-16 chaiFw-600 chaiTa-center" style="margin-top: 0; margin-bottom: 15px;">Applied Inline
           Styles:</h3>
         <div id="output" class="chaiBg-gray-100 chaiBr-5 chaiP-15 chaiFs-14 chaiT-gray-700 chaiFa-left"
           style="min-height: 25px; word-break: break-all;"></div>
@@ -40,6 +42,20 @@
 
     <!-- The original file imports main.js at the end of the body -->
     <script type="module" src="./main.js"></script>
+    <script>
+      const preview = document.getElementById("preview");
+      const input = document.getElementById("classInput");
+      const btn = document.getElementById("applyBtn");
+      const output = document.getElementById("output");
+
+      btn.addEventListener("click", () => {
+        console.log(input.value);
+
+        const classes = input.value.split(" ");
+        output.textContent = classes.join(", ");
+        preview.className = classes.join(" ");
+      });
+    </script>
 
 
   </body>
